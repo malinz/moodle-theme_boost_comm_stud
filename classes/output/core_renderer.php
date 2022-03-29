@@ -29,9 +29,7 @@ defined('MOODLE_INTERNAL') || die;
  * @copyright  2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-        
- class core_renderer extends \core_renderer {
+class core_renderer extends \core_renderer {
 
     public function edit_button(moodle_url $url) {
         $url->param('sesskey', sesskey());
@@ -45,7 +43,6 @@ defined('MOODLE_INTERNAL') || die;
         $button = new \single_button($url, $editstring, 'post', ['class' => 'btn btn-secondary']);
         return $this->render_single_button($button);
     }
-     
      
     protected function render_custom_menu(custom_menu $menu) {
         global $CFG;
@@ -101,5 +98,4 @@ defined('MOODLE_INTERNAL') || die;
 
         return $content;
     }
-    
- }
+}
